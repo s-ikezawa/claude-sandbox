@@ -159,9 +159,9 @@ Conventional Commits形式のメッセージを作成します。
 1. **説明文の文末に句点（。）を付けない** - Conventional Commitsの標準慣習
    - **例外**: フェーズ1で`git log`を確認し、既存のコミットメッセージが句点を使用している場合はプロジェクトの慣習に従う
 2. **日本語で記述**（技術用語は英語のまま）
-3. **タイプは小文字** (`feat`, `fix`, etc.)
+3. **タイプは小文字** (例: feat, fix, etc.)
 4. **BREAKING CHANGEは大文字** (`BREAKING CHANGE:`)
-5. **破壊的変更には`!`を付ける** (`feat!:`, `fix!:`)
+5. **破壊的変更には`!`を付ける** (例: `feat!:`, `fix!:`)
 
 ### HEREDOCを使用したコミット実行
 
@@ -182,9 +182,9 @@ EOF
 
 - **既存の慣習を優先**: 過去のコミットから形式を確認
 - **言語/フレームワークに応じて決定**:
-  - JavaScript/TypeScript: ケバブケース (`user-service`)
-  - Python/Ruby: スネークケース (`user_service`)
-  - Java/C#: キャメルケース (`userService`)
+  - JavaScript/TypeScript: ケバブケース (例: user-service)
+  - Python/Ruby: スネークケース (例: user_service)
+  - Java/C#: キャメルケース (例: userService)
   - 迷った場合: ケバブケース推奨
 
 **詳細**: [execution-phases.md - スコープの決定](resources/execution-phases.md#5-スコープscopeの決定オプション)
@@ -208,14 +208,14 @@ EOF
 
 AIがコミットメッセージを生成する際、以下の項目を確認すること：
 
-- ✅ タイプは小文字（`feat`, not `Feat`）
-- ✅ スコープは括弧で囲む（`feat(api):`, not `feat:api:`）
-- ✅ コロンの後にスペース（`: description`, not `:description`）
-- ✅ 説明文に句点なし（`機能を追加`, not `機能を追加。`）
+- ✅ タイプは小文字（feat, not Feat）
+- ✅ スコープは括弧で囲む（feat(api):の形式）
+- ✅ コロンの後にスペース（: descriptionの形式）
+- ✅ 説明文に句点なし（機能を追加、not 機能を追加。）
   - 例外：既存のコミットメッセージで句点が使用されている場合は従う
-- ✅ 破壊的変更には`!`（`feat!:`, not `feat:` with BREAKING CHANGE only）
-- ✅ BREAKING CHANGEは大文字（not `Breaking Change:`）
-- ✅ HEREDOCは`<<'EOF'`（シングルクォート付き）を使用
+- ✅ 破壊的変更には!を付ける（feat!:の形式）
+- ✅ BREAKING CHANGEは大文字（not Breaking Change:）
+- ✅ HEREDOCはシングルクォート付きEOFを使用
 
 ## 実行時の注意事項
 
